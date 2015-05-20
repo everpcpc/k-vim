@@ -40,6 +40,7 @@ let g:syntastic_python_checkers=['pyflakes', 'pep8'] " 使用pyflakes,速度比p
 let g:syntastic_python_pep8_args='--ignore=E501,E225'
 let g:syntastic_javascript_checkers = ['jsl', 'jshint']
 let g:syntastic_html_checkers=['tidy', 'jshint']
+let g:syntastic_scala_checkers=['']
 " 修改高亮的背景色, 适应主题
 highlight SyntasticErrorSign guifg=white guibg=black
 
@@ -62,83 +63,83 @@ nnoremap <Leader>s :call ToggleErrors()<cr>
 
 
 
-" ################### 自动补全 ###################
+" " ################### 自动补全 ###################
 
-" 代码自动补全
-"迄今为止用到的最好的自动VIM自动补全插件
-"重启 :YcmRestartServer
-Bundle 'Valloric/YouCompleteMe'
-"youcompleteme  默认tab  s-tab 和自动补全冲突
-"let g:ycm_key_list_select_completion=['<c-n>']
-let g:ycm_key_list_select_completion = ['<Down>']
-"let g:ycm_key_list_previous_completion=['<c-p>']
-let g:ycm_key_list_previous_completion = ['<Up>']
-let g:ycm_complete_in_comments = 1  "在注释输入中也能补全
-let g:ycm_complete_in_strings = 1   "在字符串输入中也能补全
-let g:ycm_use_ultisnips_completer = 1 "提示UltiSnips
-let g:ycm_collect_identifiers_from_comments_and_strings = 1   "注释和字符串中的文字也会被收入补全
-let g:ycm_collect_identifiers_from_tags_files = 1
+" " 代码自动补全
+" "迄今为止用到的最好的自动VIM自动补全插件
+" "重启 :YcmRestartServer
+" Bundle 'Valloric/YouCompleteMe'
+" "youcompleteme  默认tab  s-tab 和自动补全冲突
+" "let g:ycm_key_list_select_completion=['<c-n>']
+" let g:ycm_key_list_select_completion = ['<Down>']
+" "let g:ycm_key_list_previous_completion=['<c-p>']
+" let g:ycm_key_list_previous_completion = ['<Up>']
+" let g:ycm_complete_in_comments = 1  "在注释输入中也能补全
+" let g:ycm_complete_in_strings = 1   "在字符串输入中也能补全
+" let g:ycm_use_ultisnips_completer = 1 "提示UltiSnips
+" let g:ycm_collect_identifiers_from_comments_and_strings = 1   "注释和字符串中的文字也会被收入补全
+" let g:ycm_collect_identifiers_from_tags_files = 1
 
-"let g:ycm_seed_identifiers_with_syntax=1   "语言关键字补全, 不过python关键字都很短，所以，需要的自己打开
+" "let g:ycm_seed_identifiers_with_syntax=1   "语言关键字补全, 不过python关键字都很短，所以，需要的自己打开
 
-" 跳转到定义处, 分屏打开
-let g:ycm_goto_buffer_command = 'horizontal-split'
-" nnoremap <leader>jd :YcmCompleter GoToDefinition<CR>
-nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
-nnoremap <leader>gd :YcmCompleter GoToDeclaration<CR>
+" " 跳转到定义处, 分屏打开
+" let g:ycm_goto_buffer_command = 'horizontal-split'
+" " nnoremap <leader>jd :YcmCompleter GoToDefinition<CR>
+" nnoremap <leader>jd :YcmCompleter GoToDefinitionElseDeclaration<CR>
+" nnoremap <leader>gd :YcmCompleter GoToDeclaration<CR>
 
-" 引入，可以补全系统，以及python的第三方包 针对新老版本YCM做了兼容
-" old version
-if !empty(glob("~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"))
-    let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"
-endif
-" new version
-if !empty(glob("~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"))
-    let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
-endif
+" " 引入，可以补全系统，以及python的第三方包 针对新老版本YCM做了兼容
+" " old version
+" if !empty(glob("~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"))
+    " let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/cpp/ycm/.ycm_extra_conf.py"
+" endif
+" " new version
+" if !empty(glob("~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"))
+    " let g:ycm_global_ycm_extra_conf = "~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py"
+" endif
 
-" 直接触发自动补全 insert模式下
-" let g:ycm_key_invoke_completion = '<C-Space>'
-" 黑名单,不启用
-let g:ycm_filetype_blacklist = {
-      \ 'tagbar' : 1,
-      \ 'gitcommit' : 1,
-      \}
+" " 直接触发自动补全 insert模式下
+" " let g:ycm_key_invoke_completion = '<C-Space>'
+" " 黑名单,不启用
+" let g:ycm_filetype_blacklist = {
+      " \ 'tagbar' : 1,
+      " \ 'gitcommit' : 1,
+      " \}
 
 
-" 代码片段快速插入 (snippets中,是代码片段资源,需要学习)
-Bundle 'SirVer/ultisnips'
-" Snippets are separated from the engine. Add this if you want them:
-Bundle 'honza/vim-snippets'
+" " 代码片段快速插入 (snippets中,是代码片段资源,需要学习)
+" Bundle 'SirVer/ultisnips'
+" " Snippets are separated from the engine. Add this if you want them:
+" Bundle 'honza/vim-snippets'
 
-let g:UltiSnipsExpandTrigger       = "<tab>"
-let g:UltiSnipsJumpForwardTrigger  = "<tab>"
-let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
-let g:UltiSnipsSnippetDirectories  = ['UltiSnips']
-let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
-" 定义存放代码片段的文件夹 .vim/UltiSnips下，使用自定义和默认的，将会的到全局，有冲突的会提示
-" 进入对应filetype的snippets进行编辑
-map <leader>us :UltiSnipsEdit<CR>
+" let g:UltiSnipsExpandTrigger       = "<tab>"
+" let g:UltiSnipsJumpForwardTrigger  = "<tab>"
+" let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
+" let g:UltiSnipsSnippetDirectories  = ['UltiSnips']
+" let g:UltiSnipsSnippetsDir = '~/.vim/UltiSnips'
+" " 定义存放代码片段的文件夹 .vim/UltiSnips下，使用自定义和默认的，将会的到全局，有冲突的会提示
+" " 进入对应filetype的snippets进行编辑
+" map <leader>us :UltiSnipsEdit<CR>
 
-" ctrl+j/k 进行选择
-func! g:JInYCM()
-    if pumvisible()
-        return "\<C-n>"
-    else
-        return "\<c-j>"
-    endif
-endfunction
+" " ctrl+j/k 进行选择
+" func! g:JInYCM()
+    " if pumvisible()
+        " return "\<C-n>"
+    " else
+        " return "\<c-j>"
+    " endif
+" endfunction
 
-func! g:KInYCM()
-    if pumvisible()
-        return "\<C-p>"
-    else
-        return "\<c-k>"
-    endif
-endfunction
-inoremap <c-j> <c-r>=g:JInYCM()<cr>
-au BufEnter,BufRead * exec "inoremap <silent> " . g:UltiSnipsJumpBackwordTrigger . " <C-R>=g:KInYCM()<cr>"
-let g:UltiSnipsJumpBackwordTrigger = "<c-k>"
+" func! g:KInYCM()
+    " if pumvisible()
+        " return "\<C-p>"
+    " else
+        " return "\<c-k>"
+    " endif
+" endfunction
+" inoremap <c-j> <c-r>=g:JInYCM()<cr>
+" au BufEnter,BufRead * exec "inoremap <silent> " . g:UltiSnipsJumpBackwordTrigger . " <C-R>=g:KInYCM()<cr>"
+" let g:UltiSnipsJumpBackwordTrigger = "<c-k>"
 
 
 " 自动补全单引号，双引号等
@@ -354,19 +355,19 @@ au Syntax * RainbowParenthesesLoadBraces
 
 " ################### 显示增强-主题 ###################"
 
-" 主题 solarized
-Bundle 'altercation/vim-colors-solarized'
-let g:solarized_termtrans=1
-let g:solarized_contrast="normal"
-let g:solarized_visibility="normal"
+" " 主题 solarized
+" Bundle 'altercation/vim-colors-solarized'
+" let g:solarized_termtrans=1
+" let g:solarized_contrast="normal"
+" let g:solarized_visibility="normal"
 
-" 主题 molokai
-Bundle 'tomasr/molokai'
-" monokai原始背景色
-let g:molokai_original = 1
+" " 主题 molokai
+" Bundle 'tomasr/molokai'
+" " monokai原始背景色
+" let g:molokai_original = 1
 
-" 主题 tomorrow
-Bundle 'chriskempson/vim-tomorrow-theme'
+" " 主题 tomorrow
+" Bundle 'chriskempson/vim-tomorrow-theme'
 
 
 " ################### 快速导航 ###################
@@ -401,9 +402,10 @@ hi CtrlSpaceStatus   guifg=#839496 guibg=#002b36 gui=reverse term=reverse cterm=
 
 
 " for minibufferexpl 去掉, 有需要同学的自己解开
-" Bundle 'fholgado/minibufexpl.vim'
-" let g:miniBufExplMapWindowNavVim = 1
-" let g:miniBufExplMapWindowNavArrows = 1
+Bundle 'fholgado/minibufexpl.vim'
+let g:miniBufExplMaxSize = 2
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
 " let g:miniBufExplMapCTabSwitchBufs = 1
 " let g:miniBufExplModSelTarget = 1
 " " 解决FileExplorer窗口变小问题
@@ -483,6 +485,10 @@ map <F10> :QuickRun<CR>
 
 " ###### Python #########
 
+
+" 自动补全
+Bundle 'davidhalter/jedi-vim'
+
 " python fly check, 弥补syntastic只能打开和保存才检查语法的不足
 Bundle 'kevinw/pyflakes-vim'
 let g:pyflakes_use_quickfix = 0
@@ -521,7 +527,7 @@ let g:html_indent_style1 = "inc"
 
 " for javascript 自动补全,配合YCM,需要安装nodejs&npm  see
 " https://github.com/marijnh/tern_for_vim
-" Bundle 'marijnh/tern_for_vim'
+Bundle 'marijnh/tern_for_vim'
 
 " for jquery
 Bundle 'nono/jquery.vim'

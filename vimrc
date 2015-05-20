@@ -89,7 +89,7 @@ set cursorline          " 突出显示当前行
 
 "设置 退出vim后，内容显示在终端屏幕, 可以用于查看和复制
 "好处：误删什么的，如果以前屏幕打开，可以找回
-set t_ti= t_te=
+"set t_ti= t_te=
 
 
 "- 则点击光标不会换,用于复制
@@ -133,7 +133,7 @@ set showcmd
 set showmode
 
 " 在上下移动光标时，光标的上方或下方至少会保留显示的行数
-set scrolloff=7
+set scrolloff=6
 
 " set winwidth=79
 
@@ -144,8 +144,8 @@ set laststatus=2
 
 "显示行号：
 set number
-" 取消换行。
-set nowrap
+" 不取消换行。
+set wrap
 
 " 括号配对情况,跳转并高亮一下匹配的括号
 set showmatch
@@ -210,20 +210,20 @@ set nrformats=
 
 
 " 相对行号      行号变成相对，可以用 nj  nk   进行跳转 5j   5k 上下跳5行
-set relativenumber number
-au FocusLost * :set norelativenumber number
-au FocusGained * :set relativenumber
-" 插入模式下用绝对行号, 普通模式下用相对
-autocmd InsertEnter * :set norelativenumber number
-autocmd InsertLeave * :set relativenumber
-function! NumberToggle()
-  if(&relativenumber == 1)
-    set norelativenumber number
-  else
-    set relativenumber
-  endif
-endfunc
-nnoremap <C-n> :call NumberToggle()<cr>
+" set relativenumber number
+" au FocusLost * :set norelativenumber number
+" au FocusGained * :set relativenumber
+" " 插入模式下用绝对行号, 普通模式下用相对
+" autocmd InsertEnter * :set norelativenumber number
+" autocmd InsertLeave * :set relativenumber
+" function! NumberToggle()
+  " if(&relativenumber == 1)
+    " set norelativenumber number
+  " else
+    " set relativenumber
+  " endif
+" endfunc
+" nnoremap <C-n> :call NumberToggle()<cr>
 
 
 "==========================================
@@ -545,7 +545,7 @@ endif
 
 " Set extra options when running in GUI mode
 if has("gui_running")
-    set guifont=Monaco:h14
+    set guifont=Monaco:h12
     if has("gui_gtk2")   "GTK2
         set guifont=Monaco\ 12,Monospace\ 12
     endif
@@ -563,7 +563,8 @@ endif
 " theme主题
 set background=dark
 set t_Co=256
-colorscheme solarized
+colorscheme madeofcode
+" colorscheme solarized
 " colorscheme molokai
 " colorscheme Tomorrow-Night
 " colorscheme Tomorrow-Night-Bright
@@ -586,4 +587,10 @@ highlight SpellRare term=underline cterm=underline
 highlight clear SpellLocal
 highlight SpellLocal term=underline cterm=underline
 
+" 输入法
+set noimdisable
+set iminsert=0
+set imsearch=0
+
+set clipboard=unnamed
 
