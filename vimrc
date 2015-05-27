@@ -563,7 +563,8 @@ endif
 " theme主题
 set background=dark
 set t_Co=256
-colorscheme madeofcode
+" colorscheme madeofcode
+colorscheme inkpot
 " colorscheme solarized
 " colorscheme molokai
 " colorscheme Tomorrow-Night
