@@ -450,5 +450,7 @@ let g:vim_markdown_folding_disabled=1
 " ###### nginx #########
 " Bundle 'evanmiller/nginx-vim-syntax'
 
+" ###### ack ##########
+Plugin 'mileszs/ack.vim'
 
 "------------------------------------------- end of configs --------------------------------------------
