@@ -453,4 +453,8 @@ let g:vim_markdown_folding_disabled=1
 " ###### ack ##########
 Plugin 'mileszs/ack.vim'
 
+" ####### 平滑滚动 #######
+
+Bundle 'yonchu/accelerated-smooth-scroll'
+
 "------------------------------------------- end of configs --------------------------------------------
