@@ -447,14 +447,15 @@ let g:vim_markdown_folding_disabled=1
 " ###### HTML/JS/JQUERY/CSS #########
 
 
-" ###### nginx #########
-" Bundle 'evanmiller/nginx-vim-syntax'
+" ###### syntax #########
+Bundle 'evanmiller/nginx-vim-syntax'
+Bundle 'puppetlabs/puppet-syntax-vim'
 
 " ###### ack ##########
 Plugin 'mileszs/ack.vim'
 
 " ####### 平滑滚动 #######
 
-" Bundle 'yonchu/accelerated-smooth-scroll'
+Bundle 'yonchu/accelerated-smooth-scroll'
 
 "------------------------------------------- end of configs --------------------------------------------
