@@ -545,9 +545,9 @@ endif
 
 " Set extra options when running in GUI mode
 if has("gui_running")
-    set guifont=Monaco:h12
+    set guifont=Monaco:h10
     if has("gui_gtk2")   "GTK2
-        set guifont=Monaco\ 12,Monospace\ 12
+        set guifont=Monaco\ 10,Monospace\ 10
     endif
     set guioptions-=T
     set guioptions+=e

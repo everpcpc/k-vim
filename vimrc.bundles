@@ -455,6 +455,6 @@ Plugin 'mileszs/ack.vim'
 
 " ####### 平滑滚动 #######
 
-Bundle 'yonchu/accelerated-smooth-scroll'
+" Bundle 'yonchu/accelerated-smooth-scroll'
 
 "------------------------------------------- end of configs --------------------------------------------
