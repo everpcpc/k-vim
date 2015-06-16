@@ -62,7 +62,6 @@ nnoremap <Leader>s :call ToggleErrors()<cr>
 " nnoremap <Leader>sp :lprevious<cr>
 
 
-
 " " 代码片段快速插入 (snippets中,是代码片段资源,需要学习)
 " Bundle 'SirVer/ultisnips'
 " " Snippets are separated from the engine. Add this if you want them:
@@ -423,10 +422,6 @@ map <F10> :QuickRun<CR>
 
 " 自动补全
 Bundle 'davidhalter/jedi-vim'
-
-" python fly check, 弥补syntastic只能打开和保存才检查语法的不足
-Bundle 'kevinw/pyflakes-vim'
-let g:pyflakes_use_quickfix = 0
 
 " for python.vim syntax highlight
 Bundle 'hdima/python-syntax'
