@@ -563,15 +563,16 @@ endif
 " theme主题
 set background=dark
 set t_Co=256
-" colorscheme madeofcode
 colorscheme inkpot
+" colorscheme madeofcode
 " colorscheme solarized
 " colorscheme molokai
 " colorscheme Tomorrow-Night
 " colorscheme Tomorrow-Night-Bright
 " colorscheme desert
 
-
+hi CursorLine cterm=NONE ctermbg=darkgrey ctermfg=NONE guibg=NONE guifg=NONE
+hi CursorColumn cterm=NONE ctermbg=darkgrey ctermfg=NONE guibg=NONE guifg=NONE
 
 "设置标记一列的背景颜色和数字一行颜色一致
 hi! link SignColumn   LineNr
