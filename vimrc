@@ -590,7 +590,7 @@ highlight clear SpellLocal
 highlight SpellLocal term=underline cterm=underline
 
 " 输入法
-set noimdisable
+set imdisable
 set iminsert=0
 set imsearch=0
 
