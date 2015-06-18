@@ -455,6 +455,7 @@ Plugin 'mileszs/ack.vim'
 
 " ####### 平滑滚动 #######
 
-Bundle 'yonchu/accelerated-smooth-scroll'
-
+if has("gui_running")
+    Bundle 'yonchu/accelerated-smooth-scroll'
+endif
 "------------------------------------------- end of configs --------------------------------------------

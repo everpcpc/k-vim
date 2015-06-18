@@ -24,8 +24,8 @@
 "==========================================
 
 " 修改leader键
-let mapleader = ','
-let g:mapleader = ','
+let mapleader = ';'
+let g:mapleader = ';'
 
 " 开启语法高亮
 syntax on
@@ -174,17 +174,17 @@ set foldenable
 set foldmethod=indent
 set foldlevel=99
 " 代码折叠自定义快捷键
-let g:FoldMethod = 0
-map <leader>zz :call ToggleFold()<cr>
-fun! ToggleFold()
-    if g:FoldMethod == 0
-        exe "normal! zM"
-        let g:FoldMethod = 1
-    else
-        exe "normal! zR"
-        let g:FoldMethod = 0
-    endif
-endfun
+" let g:FoldMethod = 0
+" map <leader>zz :call ToggleFold()<cr>
+" fun! ToggleFold()
+    " if g:FoldMethod == 0
+        " exe "normal! zM"
+        " let g:FoldMethod = 1
+    " else
+        " exe "normal! zR"
+        " let g:FoldMethod = 0
+    " endif
+" endfun
 
 " 缩进配置
 
@@ -330,6 +330,7 @@ set pastetoggle=<F5>            "    when in insert mode, press <F5> to go to
 
 " disbale paste mode when leaving insert mode
 au InsertLeave * set nopaste
+au InsertEnter * set paste
 
 nnoremap <F6> :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
 
@@ -347,7 +348,7 @@ noremap L $
 
 "Map ; to : and save a million keystrokes
 " ex mode commands made easy 用于快速进入命令行
-nnoremap ; :
+" nnoremap ; :
 
 
 " 命令行模式增强，ctrl - a到行首， -e 到行尾
@@ -372,8 +373,8 @@ nnoremap <silent> # #zz
 nnoremap <silent> g* g*zz
 
 " switch # *
-nnoremap # *
-nnoremap * #
+" nnoremap # *
+" nnoremap * #
 
 " for # indent, python文件中输入新行时#号注释不切回行首
 autocmd BufNewFile,BufRead *.py inoremap # X<c-h>#
@@ -479,7 +480,7 @@ nnoremap <C-y> 2<C-y>
 " Quickly close the current window
 nnoremap <leader>q :q<CR>
 
-" Swap implementations of ` and ' jump to markers
+" Swap imlementations of ` and ' jump to markers
 " By default, ' jumps to the marked line, ` jumps to the marked line and
 " column, so swap them
 nnoremap ' `
@@ -561,7 +562,6 @@ if has("gui_running")
 endif
 
 " theme主题
-set background=dark
 set t_Co=256
 colorscheme inkpot
 " colorscheme madeofcode
@@ -570,14 +570,16 @@ colorscheme inkpot
 " colorscheme Tomorrow-Night
 " colorscheme Tomorrow-Night-Bright
 " colorscheme desert
+" set background=dark
 
-hi CursorLine cterm=NONE ctermbg=darkgrey ctermfg=NONE guibg=darkgrey guifg=NONE
-hi CursorColumn cterm=NONE ctermbg=darkgrey ctermfg=NONE guibg=darkgrey guifg=NONE
+hi CursorLine cterm=italic ctermbg=NONE ctermfg=NONE guibg=darkgrey guifg=NONE
+hi CursorColumn cterm=italic ctermbg=NONE ctermfg=NONE guibg=darkgrey guifg=NONE
+hi Normal cterm=NONE ctermbg=NONE ctermfg=NONE
 
 "设置标记一列的背景颜色和数字一行颜色一致
-hi! link SignColumn   LineNr
-hi! link ShowMarksHLl DiffAdd
-hi! link ShowMarksHLu DiffChange
+" hi! link SignColumn   LineNr
+" hi! link ShowMarksHLl DiffAdd
+" hi! link ShowMarksHLu DiffChange
 
 "" for error highlight，防止错误整行标红导致看不清
 highlight clear SpellBad
