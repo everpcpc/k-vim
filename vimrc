@@ -572,8 +572,8 @@ colorscheme inkpot
 " colorscheme desert
 " set background=dark
 
-hi CursorLine cterm=italic ctermbg=NONE ctermfg=NONE guibg=darkgrey guifg=NONE
-hi CursorColumn cterm=italic ctermbg=NONE ctermfg=NONE guibg=darkgrey guifg=NONE
+hi CursorLine cterm=italic ctermbg=NONE ctermfg=NONE guibg=black guifg=NONE
+hi CursorColumn cterm=italic ctermbg=NONE ctermfg=NONE guibg=black guifg=NONE
 hi Normal cterm=NONE ctermbg=NONE ctermfg=NONE
 
 "设置标记一列的背景颜色和数字一行颜色一致
