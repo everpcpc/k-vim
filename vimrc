@@ -571,7 +571,7 @@ colorscheme inkpot
 " colorscheme Tomorrow-Night-Bright
 " colorscheme desert
 
-hi CursorLine cterm=NONE ctermbg=NONE ctermfg=darkred guibg=NONE guifg=purple
+hi CursorLine cterm=NONE ctermbg=darkgrey ctermfg=NONE guibg=darkgrey guifg=NONE
 hi CursorColumn cterm=NONE ctermbg=darkgrey ctermfg=NONE guibg=darkgrey guifg=NONE
 
 "设置标记一列的背景颜色和数字一行颜色一致
