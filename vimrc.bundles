@@ -341,10 +341,10 @@ nnoremap <Leader>m :CtrlSpace<CR>
 
 
 " for minibufferexpl 去掉, 有需要同学的自己解开
-Bundle 'fholgado/minibufexpl.vim'
+" Bundle 'fholgado/minibufexpl.vim'
 " let g:miniBufExplMaxSize = 2
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
+" let g:miniBufExplMapWindowNavVim = 1
+" let g:miniBufExplMapWindowNavArrows = 1
 " let g:miniBufExplMapCTabSwitchBufs = 1
 " let g:miniBufExplModSelTarget = 1
 " " 解决FileExplorer窗口变小问题
