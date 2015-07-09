@@ -330,7 +330,7 @@ set pastetoggle=<F5>            "    when in insert mode, press <F5> to go to
 
 " disbale paste mode when leaving insert mode
 au InsertLeave * set nopaste
-au InsertEnter * set paste
+" au InsertEnter * set paste
 
 nnoremap <F6> :exec exists('syntax_on') ? 'syn off' : 'syn on'<CR>
 
@@ -572,8 +572,8 @@ colorscheme inkpot
 " colorscheme desert
 " set background=dark
 
-hi CursorLine cterm=italic ctermbg=NONE ctermfg=NONE guibg=grey20 guifg=NONE
-hi CursorColumn cterm=italic ctermbg=NONE ctermfg=NONE guibg=grey20 guifg=NONE
+hi CursorLine cterm=italic ctermbg=black ctermfg=NONE guibg=grey20 guifg=NONE
+hi CursorColumn cterm=italic ctermbg=black ctermfg=NONE guibg=grey20 guifg=NONE
 hi Normal cterm=NONE ctermbg=NONE ctermfg=NONE
 
 "设置标记一列的背景颜色和数字一行颜色一致
