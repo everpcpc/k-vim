@@ -453,8 +453,8 @@ let g:vim_markdown_folding_disabled=1
 " Bundle 'evanmiller/nginx-vim-syntax'
 " Bundle 'puppetlabs/puppet-syntax-vim'
 
-" ###### ack ##########
-Plugin 'mileszs/ack.vim'
+" Plugin 'mileszs/ack.vim'
+Plugin 'rking/ag.vim'
 
 " ####### 平滑滚动 #######
 
