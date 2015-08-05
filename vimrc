@@ -163,7 +163,7 @@ set ignorecase
 set smartcase     " ignore case if search pattern is all lowercase, case-sensitive otherwise
 
 " 代码折叠
-set foldenable
+" set foldenable
 " 折叠方法
 " manual    手工折叠
 " indent    使用缩进表示折叠
@@ -171,8 +171,8 @@ set foldenable
 " syntax    使用语法定义折叠
 " diff      对没有更改的文本进行折叠
 " marker    使用标记进行折叠, 默认标记是 {{{ 和 }}}
-set foldmethod=indent
-set foldlevel=99
+" set foldmethod=indent
+" set foldlevel=99
 " 代码折叠自定义快捷键
 " let g:FoldMethod = 0
 " map <leader>zz :call ToggleFold()<cr>
@@ -465,7 +465,7 @@ nnoremap <leader>v V`}
 cmap w!! w !sudo tee >/dev/null %
 
 " kj 替换 Esc
-inoremap kj <Esc>
+" inoremap kj <Esc>
 
 " 滚动Speed up scrolling of the viewport slightly
 nnoremap <C-e> 2<C-e>
@@ -572,8 +572,8 @@ colorscheme inkpot
 " colorscheme desert
 " set background=dark
 
-hi CursorLine cterm=italic ctermbg=black ctermfg=NONE guibg=grey20 guifg=NONE
-hi CursorColumn cterm=italic ctermbg=black ctermfg=NONE guibg=grey20 guifg=NONE
+hi CursorLine cterm=NONE ctermbg=237 ctermfg=NONE guibg=grey20 guifg=NONE
+hi CursorColumn cterm=NONE ctermbg=237 ctermfg=NONE guibg=grey20 guifg=NONE
 hi Normal cterm=NONE ctermbg=NONE ctermfg=NONE
 
 augroup CursorLine
