@@ -576,6 +576,12 @@ hi CursorLine cterm=italic ctermbg=black ctermfg=NONE guibg=grey20 guifg=NONE
 hi CursorColumn cterm=italic ctermbg=black ctermfg=NONE guibg=grey20 guifg=NONE
 hi Normal cterm=NONE ctermbg=NONE ctermfg=NONE
 
+augroup CursorLine
+  au!
+  au VimEnter,WinEnter,BufWinEnter * setlocal cursorline cursorcolumn
+  au WinLeave * setlocal nocursorline nocursorcolumn
+augroup END
+
 "设置标记一列的背景颜色和数字一行颜色一致
 " hi! link SignColumn   LineNr
 " hi! link ShowMarksHLl DiffAdd
