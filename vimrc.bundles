@@ -434,15 +434,13 @@ let python_highlight_all = 1
 Bundle 'plasticboy/vim-markdown'
 let g:vim_markdown_folding_disabled=1
 
-Bundle 'king/ag.vim'
+Bundle 'rking/ag.vim'
 
 " ###### syntax #########
 " Bundle 'evanmiller/nginx-vim-syntax'
 " Bundle 'puppetlabs/puppet-syntax-vim'
 
 " ####### 平滑滚动 #######
+" Bundle 'yonchu/accelerated-smooth-scroll'
 
-if has("gui_running")
-    Bundle 'yonchu/accelerated-smooth-scroll'
-endif
 "------------------------------------------- end of configs --------------------------------------------
