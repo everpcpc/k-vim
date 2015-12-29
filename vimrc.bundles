@@ -416,7 +416,7 @@ Bundle 'othree/vim-autocomplpop'
 " ###### Python #########
 
 " 自动补全
-Bundle 'davidhalter/jedi-vim'
+" Bundle 'davidhalter/jedi-vim'
 
 " for python.vim syntax highlight
 Bundle 'hdima/python-syntax'
