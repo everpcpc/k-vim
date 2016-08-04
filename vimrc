@@ -607,4 +607,3 @@ set iminsert=0
 set imsearch=0
 
 set clipboard=unnamed
-
