@@ -419,6 +419,11 @@ Bundle 'othree/vim-autocomplpop'
 " 自动补全
 " Bundle 'davidhalter/jedi-vim'
 
+" auto format
+Bundle 'tell-k/vim-autopep8'
+let g:autopep8_ignore="E501,E128"
+
+
 " for python.vim syntax highlight
 Bundle 'hdima/python-syntax'
 let python_highlight_all = 1
