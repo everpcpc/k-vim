@@ -39,6 +39,7 @@ let g:syntastic_python_checkers=['pyflakes', 'pep8'] " 使用pyflakes,速度比p
 " error code: http://pep8.readthedocs.org/en/latest/intro.html#error-codes
 let g:syntastic_python_pep8_args='--ignore=E501,E128'
 " let g:syntastic_python_pep8_args='--ignore=E501,E225'
+let g:syntastic_puppet_puppetlint_args='--no-autoloader_layout-check --no-documentation-check'
 let g:syntastic_javascript_checkers = ['jsl', 'jshint']
 let g:syntastic_html_checkers=['tidy', 'jshint']
 let g:syntastic_scala_checkers=['']
