@@ -6,3 +6,4 @@ configs
 myconfig.sh
 .netrwhist
 *.un~
+init.vim
