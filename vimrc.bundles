@@ -339,6 +339,9 @@ let python_highlight_all = 1
 " 有bug, 和当前有冲突, 尚未解决, 不要打开
 " Bundle 'tpope/vim-endwise'
 
+" ########## golang ##########
+Bundle 'fatih/vim-go'
+
 
 " ###### Markdown #########
 Bundle 'plasticboy/vim-markdown'
