@@ -587,7 +587,8 @@ augroup CursorLine
 augroup END
 
 " show tab
-set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+set showbreak=↪\
+set listchars=tab:→\ ,eol:↲,nbsp:␣,trail:•,extends:⟩,precedes:⟨
 set list
 
 "设置标记一列的背景颜色和数字一行颜色一致
