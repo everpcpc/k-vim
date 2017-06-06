@@ -322,6 +322,8 @@ let g:autopep8_ignore="E501,E128"
 Bundle 'hdima/python-syntax'
 let python_highlight_all = 1
 
+Bundle "davidhalter/jedi-vim"
+
 " ###### Ruby #########
 " Bundle 'vim-ruby/vim-ruby'
 " Bundle 'nelstrom/vim-textobj-rubyblock'
