@@ -311,6 +311,8 @@ map <F10> :QuickRun<CR>
 
 Bundle 'eparreno/vim-l9'
 Bundle 'othree/vim-autocomplpop'
+Bundle 'roxma/SimpleAutoComplPop'
+
 
 " ###### Python #########
 
@@ -331,9 +333,13 @@ Bundle "davidhalter/jedi-vim"
 " 有bug, 和当前有冲突, 尚未解决, 不要打开
 " Bundle 'tpope/vim-endwise'
 
-" ########## golang ##########
-Bundle 'fatih/vim-go'
+" ########## golang ###################
 
+autocmd BufWritePre *.go :Fmt
+
+Bundle 'fatih/vim-go'
+Bundle 'dgryski/vim-godef'
+Bundle 'Blackrush/vim-gocode'
 
 " ###### Markdown #########
 Bundle 'plasticboy/vim-markdown'
