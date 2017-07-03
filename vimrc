@@ -503,6 +503,7 @@ nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
 " Python 文件的一般设置，比如不要 tab 等
 autocmd FileType python set tabstop=4 shiftwidth=4 expandtab ai
+autocmd FileType puppet set tabstop=4 shiftwidth=4 expandtab ai
 autocmd FileType ruby set tabstop=2 shiftwidth=2 softtabstop=2 expandtab ai
 
 " " 保存python文件时删除多余空格
