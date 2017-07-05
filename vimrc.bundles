@@ -354,4 +354,7 @@ Bundle 'rking/ag.vim'
 " ####### 平滑滚动 #######
 " Bundle 'yonchu/accelerated-smooth-scroll'
 
+Bundle 'jreybert/vim-largefile'
+let g:LargeFile=10
+
 "------------------------------------------- end of configs --------------------------------------------
