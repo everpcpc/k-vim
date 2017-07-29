@@ -506,6 +506,7 @@ autocmd FileType python set tabstop=4 shiftwidth=4 expandtab ai
 autocmd FileType puppet set tabstop=4 shiftwidth=4 expandtab ai
 autocmd FileType ruby set tabstop=2 shiftwidth=2 softtabstop=2 expandtab ai
 autocmd FileType json set tabstop=2 shiftwidth=2 softtabstop=2 expandtab ai
+autocmd FileType go set tabstop=2 shiftwidth=2 softtabstop=2 ai
 
 " " 保存python文件时删除多余空格
 " fun! <SID>StripTrailingWhitespaces()
