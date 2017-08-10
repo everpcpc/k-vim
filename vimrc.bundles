@@ -357,4 +357,9 @@ Bundle 'rking/ag.vim'
 Bundle 'jreybert/vim-largefile'
 let g:LargeFile=10
 
+
+" ####### color ###################
+
+Bundle 'kristijanhusak/vim-hybrid-material'
+
 "------------------------------------------- end of configs --------------------------------------------
