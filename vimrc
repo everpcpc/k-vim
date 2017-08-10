@@ -255,8 +255,8 @@ set formatoptions+=B
 autocmd! bufwritepost _vimrc source % " vimrc文件修改之后自动加载。 windows。
 autocmd! bufwritepost .vimrc source % " vimrc文件修改之后自动加载。 linux。
 
-autocmd CursorMoved * silent! exe printf('match Underlined /\<%s\>/', expand('<cword>'))
-autocmd CursorHold * silent! exe printf('match Underlined /\<%s\>/', expand('<cword>'))
+" autocmd CursorMoved * silent! exe printf('match Underlined /\<%s\>/', expand('<cword>'))
+" autocmd CursorHold * silent! exe printf('match Underlined /\<%s\>/', expand('<cword>'))
 
 " 自动补全配置
 "让Vim的补全菜单行为与一般IDE一致(参考VimTip1228)
