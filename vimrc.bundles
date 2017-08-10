@@ -20,16 +20,16 @@ call vundle#rc()
 
 " 使用Vundle来管理插件
 " vim plugin bundle control, command model
-"     :BundleInstall     install 安装配置的插件
-"     :BundleInstall!    update  更新
-"     :BundleClean       remove plugin not in list 删除本地无用插件
-Bundle 'gmarik/vundle'
+"     :PluginInstall     install 安装配置的插件
+"     :PluginInstall!    update  更新
+"     :PluginClean       remove plugin not in list 删除本地无用插件
+Plugin 'gmarik/vundle'
 
 
 " ################### 基础 ######################
 
 " 多语言语法检查
-Bundle 'w0rp/ale'
+Plugin 'w0rp/ale'
 let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'python': ['flake8'],
@@ -56,7 +56,7 @@ nnoremap <Leader>sp :ALEPrevious<cr>
 
 
 " 自动补全单引号，双引号等
-Bundle 'Raimondi/delimitMate'
+Plugin 'Raimondi/delimitMate'
 
 "" for python docstring ",优化输入
 au FileType python let b:delimitMate_nesting_quotes = ['"']
@@ -65,27 +65,27 @@ au FileType mail let b:delimitMate_autoclose = 0
 
 
 " 自动补全html/xml标签
-Bundle 'docunext/closetag.vim'
+Plugin 'docunext/closetag.vim'
 let g:closetag_html_style=1
 
 " ################### 快速编码 ###################
 
 " 快速注释
-Bundle 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdcommenter'
 let g:NERDSpaceDelims=1
 
 
 " 快速加入修改环绕字符
-" Bundle 'tpope/vim-surround'
+" Plugin 'tpope/vim-surround'
 " for repeat -> enhance surround.vim, . to repeat command
-" Bundle 'tpope/vim-repeat'
+" Plugin 'tpope/vim-repeat'
 
 " 快速去行尾空格 [, + <Space>]
-Bundle 'bronson/vim-trailing-whitespace'
+Plugin 'bronson/vim-trailing-whitespace'
 map <leader><space> :FixWhitespace<cr>
 
 " 快速赋值语句对齐
-Bundle 'junegunn/vim-easy-align'
+Plugin 'junegunn/vim-easy-align'
 vmap <Leader>a <Plug>(EasyAlign)
 nmap <Leader>a <Plug>(EasyAlign)
 if !exists('g:easy_align_delimiters')
@@ -96,7 +96,7 @@ let g:easy_align_delimiters['#'] = { 'pattern': '#', 'ignore_groups': ['String']
 " ################### 快速移动 ###################
 
 "更高效的移动 [,, + w/fx]
-Bundle 'Lokaltog/vim-easymotion'
+Plugin 'Lokaltog/vim-easymotion'
 let g:EasyMotion_smartcase = 1
 "let g:EasyMotion_startofline = 0 " keep cursor colum when JK motion
 map <Leader><Leader>h <Plug>(easymotion-linebackward)
@@ -108,19 +108,19 @@ map <Leader><leader>. <Plug>(easymotion-repeat)
 
 
 
-Bundle 'vim-scripts/matchit.zip'
+Plugin 'vim-scripts/matchit.zip'
 
 
 " ################### 快速选中 ###################
 " 选中区块
-Bundle 'terryma/vim-expand-region'
+Plugin 'terryma/vim-expand-region'
 " map + <Plug>(expand_region_expand)
 " map _ <Plug>(expand_region_shrink)
 vmap v <Plug>(expand_region_expand)
 vmap V <Plug>(expand_region_shrink)
 
 " 多光标选中编辑
-Bundle 'terryma/vim-multiple-cursors'
+Plugin 'terryma/vim-multiple-cursors'
 let g:multi_cursor_use_default_mapping=0
 " Default mapping
 let g:multi_cursor_next_key='<C-m>'
@@ -132,7 +132,7 @@ let g:multi_cursor_quit_key='<Esc>'
 
 " 文件搜索
 " change to https://github.com/ctrlpvim/ctrlp.vim
-Bundle 'ctrlpvim/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 let g:ctrlp_map = '<leader>l'
 let g:ctrlp_cmd = 'CtrlP'
 map <leader>f :CtrlPMRU<CR>
@@ -157,7 +157,7 @@ endif
 
 " 同git diff,实时展示文件中修改的行
 " 只是不喜欢除了行号多一列, 默认关闭,gs时打开
-Bundle 'airblade/vim-gitgutter'
+Plugin 'airblade/vim-gitgutter'
 let g:gitgutter_map_keys = 0
 let g:gitgutter_enabled = 0
 let g:gitgutter_highlight_lines = 1
@@ -168,10 +168,12 @@ nnoremap <leader>gs :GitGutterToggle<CR>
 
 " 状态栏增强展示
 " 新的airline配置
-Bundle 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
+let g:airline_theme = 'deus'
 let g:airline_left_sep = '▶'
 let g:airline_left_alt_sep = '❯'
 let g:airline_right_sep = '◀'
@@ -184,7 +186,7 @@ let g:airline#extensions#tabline#enabled = 1
 
 
 " 括号显示增强
-Bundle 'kien/rainbow_parentheses.vim'
+Plugin 'kien/rainbow_parentheses.vim'
 " 不加入这行, 防止黑色括号出现, 很难识别
 " \ ['black',       'SeaGreen3'],
 let g:rbpt_colorpairs = [
@@ -215,7 +217,7 @@ au Syntax * RainbowParenthesesLoadBraces
 
 " ################### 快速导航 ###################
 "目录导航
-Bundle 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdtree'
 map <leader>n :NERDTreeToggle<CR>
 let NERDTreeHighlightCursorline=1
 let NERDTreeIgnore=[ '\.pyc$', '\.pyo$', '\.obj$', '\.o$', '\.so$', '\.egg$', '^\.git$', '^\.svn$', '^\.hg$', '__pycache__$[[dir]]']
@@ -226,7 +228,7 @@ let g:NERDTreeMapOpenSplit = 's'
 let g:NERDTreeMapOpenVSplit = 'v'
 
 
-Bundle 'jistr/vim-nerdtree-tabs'
+Plugin 'jistr/vim-nerdtree-tabs'
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
 " 关闭同步
 let g:nerdtree_tabs_synchronize_view=0
@@ -236,7 +238,7 @@ let g:nerdtree_tabs_open_on_console_startup=0
 
 
 " Vim Workspace Controller
-Bundle "szw/vim-ctrlspace"
+Plugin 'szw/vim-ctrlspace'
 let g:airline_exclude_preview = 1
 hi CtrlSpaceSelected guifg=#586e75 guibg=#eee8d5 guisp=#839496 gui=reverse,bold ctermfg=10 ctermbg=7 cterm=reverse,bold
 hi CtrlSpaceNormal   guifg=#839496 guibg=#021B25 guisp=#839496 gui=NONE ctermfg=12 ctermbg=0 cterm=NONE
@@ -246,7 +248,7 @@ nnoremap <Leader>m :CtrlSpace<CR>
 
 
 " 标签导航
-Bundle 'majutsushi/tagbar'
+Plugin 'majutsushi/tagbar'
 nmap <F9> :TagbarToggle<CR>
 let g:tagbar_autofocus = 1
 " for ruby
@@ -298,7 +300,7 @@ let g:tagbar_type_go = {
 
 " ################### 语言相关 ###################
 
-Bundle 'thinca/vim-quickrun'
+Plugin 'thinca/vim-quickrun'
 let g:quickrun_config = {
 \   "_" : {
 \       "outputter" : "message",
@@ -309,57 +311,48 @@ let g:quickrun_no_default_key_mappings = 1
 nmap <Leader>r <Plug>(quickrun)
 map <F10> :QuickRun<CR>
 
-Bundle 'eparreno/vim-l9'
-Bundle 'othree/vim-autocomplpop'
-Bundle 'roxma/SimpleAutoComplPop'
+Plugin 'eparreno/vim-l9'
+Plugin 'othree/vim-autocomplpop'
 
 
 " ###### Python #########
 
 " auto format
-Bundle 'tell-k/vim-autopep8'
+Plugin 'tell-k/vim-autopep8'
 let g:autopep8_ignore="E501,E128"
 
 " for python.vim syntax highlight
-Bundle 'hdima/python-syntax'
+Plugin 'hdima/python-syntax'
 let python_highlight_all = 1
 
-Bundle "davidhalter/jedi-vim"
+Plugin 'davidhalter/jedi-vim'
 
 " ###### Ruby #########
-" Bundle 'vim-ruby/vim-ruby'
-" Bundle 'nelstrom/vim-textobj-rubyblock'
+" Plugin 'vim-ruby/vim-ruby'
+" Plugin 'nelstrom/vim-textobj-rubyblock'
 
 " 有bug, 和当前有冲突, 尚未解决, 不要打开
-" Bundle 'tpope/vim-endwise'
+" Plugin 'tpope/vim-endwise'
 
 " ########## golang ###################
 
 autocmd BufWritePre *.go :Fmt
 
-Bundle 'fatih/vim-go'
-Bundle 'dgryski/vim-godef'
-Bundle 'Blackrush/vim-gocode'
+Plugin 'fatih/vim-go'
+Plugin 'dgryski/vim-godef'
+Plugin 'Blackrush/vim-gocode'
 
 " ###### Markdown #########
-Bundle 'plasticboy/vim-markdown'
+Plugin 'plasticboy/vim-markdown'
 let g:vim_markdown_folding_disabled=1
 
-Bundle 'rking/ag.vim'
+Plugin 'rking/ag.vim'
 
 " ###### syntax #########
-" Bundle 'evanmiller/nginx-vim-syntax'
-" Bundle 'puppetlabs/puppet-syntax-vim'
+" Plugin 'evanmiller/nginx-vim-syntax'
+" Plugin 'puppetlabs/puppet-syntax-vim'
 
 " ####### 平滑滚动 #######
-" Bundle 'yonchu/accelerated-smooth-scroll'
-
-Bundle 'jreybert/vim-largefile'
-let g:LargeFile=10
-
-
-" ####### color ###################
-
-Bundle 'kristijanhusak/vim-hybrid-material'
+" Plugin 'yonchu/accelerated-smooth-scroll'
 
 "------------------------------------------- end of configs --------------------------------------------
