@@ -570,6 +570,7 @@ endif
 
 " theme主题
 set t_Co=256
+set background=dark
 colorscheme hybrid_material
 " colorscheme inkpot
 " colorscheme madeofcode
@@ -578,7 +579,6 @@ colorscheme hybrid_material
 " colorscheme Tomorrow-Night
 " colorscheme Tomorrow-Night-Bright
 " colorscheme desert
-" set background=dark
 
 hi CursorLine cterm=NONE ctermbg=237 ctermfg=NONE guibg=grey20 guifg=NONE
 hi CursorColumn cterm=NONE ctermbg=237 ctermfg=NONE guibg=grey20 guifg=NONE
