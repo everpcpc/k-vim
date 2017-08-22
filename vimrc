@@ -571,8 +571,8 @@ endif
 " theme主题
 set t_Co=256
 set background=dark
-colorscheme hybrid_material
-" colorscheme inkpot
+" colorscheme hybrid_material
+colorscheme inkpot
 " colorscheme madeofcode
 " colorscheme solarized
 " colorscheme molokai
