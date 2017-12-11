@@ -321,6 +321,10 @@ Plugin 'othree/vim-autocomplpop'
 Plugin 'tell-k/vim-autopep8'
 let g:autopep8_ignore="E501,E128"
 
+Plugin 'google/yapf', { 'rtp': 'plugins/vim' }
+map <C-Y> :call yapf#YAPF()<cr>
+imap <C-Y> <c-o>:call yapf#YAPF()<cr>
+
 " for python.vim syntax highlight
 Plugin 'hdima/python-syntax'
 let python_highlight_all = 1
