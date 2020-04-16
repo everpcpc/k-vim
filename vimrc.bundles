@@ -329,7 +329,7 @@ imap <C-Y> <c-o>:call yapf#YAPF()<cr>
 Plugin 'hdima/python-syntax'
 let python_highlight_all = 1
 
-Plugin 'davidhalter/jedi-vim'
+" Plugin 'davidhalter/jedi-vim'
 
 " ###### Ruby #########
 " Plugin 'vim-ruby/vim-ruby'
