@@ -1,6 +1,6 @@
 " Vim syntax file
-" Filename:		icinga2.vim
-" Language:		Icinga2 object configuration file
+" Filename:		icinga.vim
+" Language:		Icinga object configuration file
 " Author:		Carlos Cesario <carloscesario@gmail.com>
 " Version:		0.0.2
 " Based:		javascript.vim / nagios.vim
@@ -13,7 +13,7 @@ if !exists("main_syntax")
 	elseif exists("b:current_syntax")
 		finish
 	endif
-	let main_syntax = 'icinga2'
+	let main_syntax = 'icinga'
 endif
 
 
